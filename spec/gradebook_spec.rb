@@ -18,6 +18,8 @@ RSpec.describe 'Gradebook' do
     expect(@gradebook.instructor).to eq("Megan")
   end
 
-
+  it 'starts with an empty array of courses' do
+    expect(@gradebook.courses).to eq("[]")
+  end
 
 end
