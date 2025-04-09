@@ -50,6 +50,10 @@ RSpec.describe 'Gradebook' do
   end
 
   it 'can return a list of students whose grades are below a given threshold' do
+    @student1.log_score(89)
+    @student1.log_score(78)
+
+    expect(@gradebook.students_below(80)).to eq([])
     #p @gradebook.students_below(80)
   end
 
