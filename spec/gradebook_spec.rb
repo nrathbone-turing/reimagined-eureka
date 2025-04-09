@@ -35,8 +35,14 @@ RSpec.describe 'Gradebook' do
 
   it 'list all the students in its courses' do
     # returns a list of students in a hash where the key is a Course object and the value is an Array of Student objects
+    @course1.enroll(@student1)
+    @course1.enroll(@student2)
+    @course2.enroll(@student1)
+
     @gradebook.add_course(@course1)
     @gradebook.add_course(@course2)
+    @course1.full?
+    @course2.full?
     
     p @gradebook.list_all_students
   end

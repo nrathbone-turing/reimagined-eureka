@@ -18,6 +18,10 @@ class Course
 
   def full?
     @students.size >= @capacity
+    
+    if true
+      @full = true
+    end
   end
   
 end
