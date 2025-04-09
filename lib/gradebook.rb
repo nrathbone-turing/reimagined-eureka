@@ -19,7 +19,6 @@ class Gradebook
     end
       
   end
-   
 
   def students_below(threshold)
     

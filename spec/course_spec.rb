@@ -26,7 +26,7 @@ RSpec.describe Course do
   end
 
   it 'is not full with no students' do
-    expect(@course.full).to eq(false)
+    expect(@course.full?).to eq(false)
   end
 
   it 'can enroll students successfully' do
@@ -48,7 +48,8 @@ RSpec.describe Course do
 
     expect(@course.full?).to eq(true)
 
-    p @course
+    # p @course.full?
+    # p @course
   end
 
 

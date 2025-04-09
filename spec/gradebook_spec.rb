@@ -9,7 +9,7 @@ RSpec.describe 'Gradebook' do
   before(:each) do
     @gradebook = Gradebook.new("Megan")
     @course1 = Course.new("Calculus", 2)
-    @course2 = Course.new("Physics", 1)
+    @course2 = Course.new("Physics", 3)
     @student1 = Student.new({name: "Morgan", age: 21})
     @student2 = Student.new({name: "Jordan", age: 29})
   end
@@ -41,10 +41,12 @@ RSpec.describe 'Gradebook' do
 
     @gradebook.add_course(@course1)
     @gradebook.add_course(@course2)
-    @course1.full?
-    @course2.full?
     
-    p @gradebook.list_all_students
+    # p @course1.full?
+    # p @course2.full?
+
+    # p @gradebook.list_all_students
+   
   end
 
   it 'can return a list of students whose grades are below a given threshold' do
