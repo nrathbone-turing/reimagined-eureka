@@ -25,16 +25,18 @@ RSpec.describe Student do
     expect(@student.scores).to eq([])
   end
 
+  it 'adds scores to @scores array when provided' do
+    @student.log_score(89)
+    @student.log_score(78)
+
+    expect(@student.scores).to eq([89, 78])
+  end
+
+  it 'correctly calculates averages of all the scores' do
+    @student.log_score(89)
+    @student.log_score(78)
+    
+    expect(@student.grade).to eq(83.5)
+  end
+
 end
-
-
-
-# pry(main)> @student.log_score(89)
-
-# pry(main)> @student.log_score(78)    
-
-# pry(main)> @student.scores
-# # => [89, 78]
-
-# pry(main)> @student.grade # Average of all the scores
-# # => 83.5

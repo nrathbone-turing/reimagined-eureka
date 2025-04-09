@@ -13,7 +13,7 @@ class Student
   end
 
   def grade
-    @scores.Average
+    @scores.sum.to_f / @scores.size
   end
 
 
