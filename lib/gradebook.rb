@@ -12,12 +12,19 @@ class Gradebook
   end
 
   def list_all_students
-     {
-    # :Course => @courses.students
-    :course => @courses,
-    :students => @student
-    }
+    gradebook = {}
+ 
+    @courses.each do |course|
+      gradebook[course] = course.students
+    end
+      
   end
+   
+
+  def students_below(threshold)
+    
+  end
+
 end
 
 # example return value of list_all_students

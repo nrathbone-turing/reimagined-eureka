@@ -33,12 +33,16 @@ RSpec.describe 'Gradebook' do
     expect(@gradebook.courses).to eq([@course1, @course2])
   end
 
-  it 'returns a list of students in a hash where the key is a Course object and the value is an Array of Student objects' do
+  it 'list all the students in its courses' do
+    # returns a list of students in a hash where the key is a Course object and the value is an Array of Student objects
     @gradebook.add_course(@course1)
     @gradebook.add_course(@course2)
     
     p @gradebook.list_all_students
   end
 
+  it 'can return a list of students whose grades are below a given threshold' do
+    #p @gradebook.students_below(80)
+  end
 
 end

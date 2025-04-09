@@ -16,5 +16,4 @@ class Student
     @scores.sum.to_f / @scores.size
   end
 
-
 end
